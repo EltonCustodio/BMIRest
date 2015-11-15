@@ -8,7 +8,8 @@ $app->get('/', function() use ( $app ) {
 });
 
 //Get bmi
-$app->get('/tasks/:weight/:height', function($weight,$height) use ( $app ) {
+//https://bmirest-eltoncustodio.c9users.io/Api/Index.php/bmi/100/1.90
+$app->get('/bmi/:weight/:height', function($weight,$height) use ( $app ) {
         $bmi = $weight /($height * $height);
         $description = 0;
         if($bmi < 17)
